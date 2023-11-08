@@ -1,0 +1,84 @@
+@import "@styles/set.scss";
+
+.navbar {
+  height: 50px;
+  border-bottom: 1px solid $color-gris-claro; // Línea inferior gris claro
+  display: flex;
+  align-items: center;
+  color: $color-negro; // Texto negro
+
+  .wrapper {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .search {
+      display: flex;
+      align-items: center;
+      border: none;
+      border-bottom: 2px solid $color-verde-oscuro; // Línea inferior verde oscuro
+      padding: 5px;
+      position: relative;
+    
+      input {
+        outline: none;
+        background: transparent;
+        border: none;
+        font-size: 20px;
+        transition: width 0.4s ease-in-out;
+        padding: 0;
+      }
+    
+      .search-icon {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        color: $color-verde-oscuro; // Color del icono verde oscuro
+        cursor: pointer;
+      }
+    }
+
+    .items {
+      display: flex;
+      align-items: center;
+
+      .item {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        position: relative;
+
+        .icon {
+          font-size: 20px;
+          color: $color-verde-oscuro; // Icono verde oscuro
+        }
+
+        .avatar {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+        }
+
+        .counter {
+          width: 14px;
+          height: 15px;
+          border-radius: 50%;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 10px;
+          font-weight: bold;
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          background-color: $color-verde-claro; // Fondo verde claro para contador
+        }
+      }
+    }
+  }
+}

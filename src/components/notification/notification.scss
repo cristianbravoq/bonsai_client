@@ -1,0 +1,90 @@
+@import "@styles/set.scss";
+
+.notifications-container {
+  background-color: $color-azul-cielo;
+  border: 1px solid $color-gris-claro;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  font-family: FreeSansBold;
+
+  .notifications-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    .notifications-icon {
+      font-size: 24px;
+      color: $color-verde-oscuro;
+      margin-right: 10px;
+    }
+
+    .notifications-title {
+      font-size: 20px;
+      color: $color-negro;
+    }
+  }
+
+  .notifications-list {
+    .notification-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      .notification-icon {
+        font-size: 16px;
+        color: $color-verde-oscuro;
+        margin-right: 10px;
+      }
+
+      .notification-content {
+        font-size: 14px;
+        color: $color-negro;
+      }
+
+      .notification-timestamp {
+        font-size: 12px;
+        color: $color-verde-pinos;
+        margin-left: auto;
+      }
+
+      .notification-action {
+        button {
+          background-color: $color-verde-pinos;
+          color: $color-verde-claro;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50px;
+          height: 50px;
+
+          &:hover {
+            background-color: $color-verde-limon;
+            border: 2px solid $color-verde-oscuro;
+            *{
+                color: $color-negro;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .notifications-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    button {
+      padding: 10px 20px;
+
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, auto));
+    grid-gap: 20px; // Espacio entre las columnas
+    padding: 20px; // Espaciado interno del contenedor
+  }

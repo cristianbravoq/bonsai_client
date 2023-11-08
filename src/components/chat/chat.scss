@@ -1,0 +1,103 @@
+@import "@styles/set.scss";
+
+// Estilos para el contenedor principal
+.chat-container {
+  background-color: $color-azul-cielo;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: FreeSansBold;
+}
+
+// Estilos para el encabezado
+.chat-header {
+  display: flex;
+  align-items: center;
+  color: $color-negro;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.chat-icon {
+  margin-right: 10px;
+}
+
+// Estilos para la lista de conversaciones
+.conversations-list {
+  .conversation-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 20px;
+
+    .conversation-name {
+      color: $color-negro;
+      font-weight: bold;
+    }
+
+    .last-message {
+      color: $color-verde-pinos;
+      font-size: 14px;
+    }
+
+    .timestamp {
+      color: $color-negro;
+      font-size: 12px;
+    }
+
+    .join-button {
+      font-size: 14px;
+
+      &:hover {
+        color: $color-gris-claro;
+      }
+    }
+  }
+}
+
+// Estilos para el widget del foro
+.forum-widget {
+  margin-top: 20px;
+
+  .forum-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    
+  }
+
+  .forum-link {
+    color: $color-negro;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+
+  }
+
+  .trending-topic {
+    margin-top: 10px;
+
+    .topic-title {
+      color: $color-negro;
+      font-weight: bold;
+    }
+
+    .view-more-link {
+      color: $color-verde-pinos;
+      text-decoration: none;
+      font-size: 12px;
+
+      &:hover {
+        background-color: $color-verde-limon;
+        border: 2px solid $color-verde-oscuro;
+        padding: 7px 3px;
+        
+        *{
+            color: #000;
+        }
+      }
+    }
+  }
+}

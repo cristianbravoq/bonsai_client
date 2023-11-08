@@ -1,0 +1,112 @@
+@import "@styles/set.scss";
+
+// Estilos para el contenedor principal
+.user-profile {
+  background: $color-azul-cielo;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  height: min-content;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+// Estilos para el contenedor del avatar
+.avatar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  .user-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+
+  .edit-avatar-button {
+    width: 25px;
+    height: 25px;
+    left: 50%;
+    bottom: 1px;
+    border-radius: 50%;
+    color: $color-gris-montaña;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    position: absolute;
+    background-color: $color-verde-limon;
+
+    &:hover{
+      background-color: $color-negro;
+      color: $color-gris-claro;
+    }
+  }
+}
+
+// Estilos para el nombre del usuario
+.user-name {
+  color: $color-negro;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+// Estilos para el estado del usuario
+.status-input {
+  background-color: $color-gris-claro;
+  color: $color-negro;
+  border: none;
+  padding: 8px 10px;
+  margin: 8px 10px;
+  border-radius: 5px;
+  width: -webkit-fill-available;
+}
+
+.user-status {
+  color: $color-verde-pinos;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.edit-status-button {
+  padding: 8px 16px;
+}
+
+// Estilos para los accesos directos de clases
+.class-shortcuts {
+  display: flex;
+  overflow-x: scroll;
+  margin-top: 20px;
+  gap: 15px;
+
+  .class-shortcut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .class-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .class-name {
+      color: $color-verde-pinos;
+      font-size: 12px;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+}
+
+// Estilos para el botón de editar perfil
+.edit-profile-button {
+  margin: 12px 0;
+  padding: 8px 16px;
+}

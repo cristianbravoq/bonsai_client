@@ -1,0 +1,172 @@
+@import "@styles/set.scss";
+
+.sidebar {
+  position: sticky;
+  border-right: 0.5px solid rgb(230, 227, 227);
+  min-width: 250px;
+  background-color: $color-verde-claro; /* Fondo verde oscuro */
+  &:hover{
+    // position: absolute;
+    // width: 50vw; Aca para adaptar el sidebar a diferentes pantallas
+    z-index: 10;
+  }
+
+  .top {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-negro;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      img {
+        width: 35px;
+      }
+
+      .logo {
+        font-size: 20px;
+        font-weight: bold;
+        color: $color-gris-claro; /* Texto en color negro */
+      }
+    }
+  }
+
+  hr {
+    height: 0;
+    border: 0.5px solid rgb(230, 227, 227);
+  }
+
+  .center {
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      li{
+        padding-left: 15px;
+      }
+    }
+  
+    .title {
+      font-size: 10px;
+      font-weight: bold;
+      color: $color-negro;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      padding: 0px 10px;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+      cursor: pointer;
+      position: relative;
+      ul {
+        display: none;
+      }
+  
+      &:hover {
+        background: $color-verde-limon;
+        border-radius: 5px 0px 0px 5px;
+        ul {
+          background: $color-verde-limon;
+          border-radius: 0px 15px 15px 0px;
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 0;
+          left: 100%;
+          z-index: 10;
+          white-space: nowrap;
+          text-align: start;
+          min-width: 230px;
+
+          li { 
+            background: $color-verde-limon;
+            padding: 10px 10px 10px 10px;
+            border-radius: 0px 15px 15px 0px;
+            &:hover{
+              background: $color-verde-pinos;
+              
+              &:first-child {
+                border-radius: 0px 15px 0px 0px;
+              }
+              &:last-child {
+                border-radius: 0px 0px 15px 0px;
+              }
+              &:not(:first-child):not(:last-child) {
+                border-radius: 0px; // Aquí puedes definir el borde según tus necesidades
+              }
+              
+              .icon {
+                z-index: 10;
+                background: $color-verde-pinos;
+                color: $color-gris-claro;
+              }
+              span {
+                z-index: 10;
+                background: $color-verde-pinos;
+                color: $color-gris-claro;
+              }
+            }
+            .icon {
+              flex: 1;
+              position: relative;
+            }
+            span {
+              flex: 5;
+              width: 100%;
+              margin: 0 5px;
+            }
+          }
+        }
+      }
+  
+      .icon {
+        font-size: 24px;
+        color: $color-negro;
+      }
+  
+      span {
+        font-size: 13px;
+        font-weight: 600;
+        color: $color-verde-pinos;
+        margin-left: 10px;
+      }
+    }
+  
+    ul {
+      background: $color-verde-claro;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+
+    .colorOption {
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+      border: 1px solid $color-verde-claro; /* Borde en color verde claro */
+      cursor: pointer;
+      margin: 5px;
+      transition: background-color 0.3s; /* Transición de color de fondo en hover */
+
+      &:nth-child(1) {
+        background-color: whitesmoke;
+      }
+      &:nth-child(2) {
+        background-color: $color-negro;
+      }
+
+      &:hover {
+        background-color: $color-verde-limon; /* Fondo verde muy claro en hover */
+      }
+    }
+  }
+}
